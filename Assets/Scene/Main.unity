@@ -796,6 +796,39 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 841655150}
+--- !u!1 &902981243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 902981244}
+  m_Layer: 5
+  m_Name: '[Network Requests]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &902981244
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902981243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 1}
+  m_Children:
+  - {fileID: 1778083755}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 187.63441, y: 300}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1052653677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,6 +2205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _RegisterFlags: 04
+  BaseUrl: https://pgorelease.nianticlabs.com
 --- !u!114 &1768847158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,12 +2258,22 @@ MonoBehaviour:
   - _Behaviour: {fileID: 1848648754}
     _ImplementedTypes:
     - PokemonGoDesktop.API.Client.Services.IAuthableSession, PokemonGoDesktop.API.Client.Services,
-      Version=1.0.12.0, Culture=neutral, PublicKeyToken=null
+      Version=1.0.16.0, Culture=neutral, PublicKeyToken=null
     - PokemonGoDesktop.API.Client.Services.ISession, PokemonGoDesktop.API.Client.Services,
-      Version=1.0.12.0, Culture=neutral, PublicKeyToken=null
+      Version=1.0.16.0, Culture=neutral, PublicKeyToken=null
+    - UnityEngine.MonoBehaviour, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _SelectedType: PokemonGoDesktop.API.Client.Services.IAuthableSession, PokemonGoDesktop.API.Client.Services,
+      Version=1.0.19.0, Culture=neutral, PublicKeyToken=null
+    _SelectedPopupIndex: 0
+  - _Behaviour: {fileID: 1848648754}
+    _ImplementedTypes:
+    - PokemonGoDesktop.API.Client.Services.IAuthableSession, PokemonGoDesktop.API.Client.Services,
+      Version=1.0.19.0, Culture=neutral, PublicKeyToken=null
+    - PokemonGoDesktop.API.Client.Services.ISession, PokemonGoDesktop.API.Client.Services,
+      Version=1.0.19.0, Culture=neutral, PublicKeyToken=null
     - UnityEngine.MonoBehaviour, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     _SelectedType: PokemonGoDesktop.API.Client.Services.ISession, PokemonGoDesktop.API.Client.Services,
-      Version=1.0.12.0, Culture=neutral, PublicKeyToken=null
+      Version=1.0.19.0, Culture=neutral, PublicKeyToken=null
     _SelectedPopupIndex: 1
   nonBehaviourDependencies:
   - {fileID: 1768847158}
@@ -2247,6 +2291,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1778083754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1778083755}
+  - 114: {fileID: 1778083756}
+  m_Layer: 5
+  m_Name: AuthTicketRequest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1778083755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1778083754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 902981244}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1778083756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1778083754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -537486681, guid: 1ddf1ff5b43846d47968a7d3e07e6cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlayerProfileObtained:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PokemonGoDesktop.Unity.Common.OnPlayerProfileObtainedEvent, PokemonGoDesktop.Unity.Client,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAuthTicketRecieved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1848648754}
+        m_MethodName: SetAuthenticationTicket
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: PokemonGoDesktop.Unity.Common.OnAuthTicketRecievedEvent, PokemonGoDesktop.Unity.Client,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnErrorWithAuthTicket:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PokemonGoDesktop.Unity.Common.OnErrorWithAuthTicketEvent, PokemonGoDesktop.Unity.Client,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1779174699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,6 +2553,11 @@ MonoBehaviour:
   m_Script: {fileID: -2103718231, guid: f60ad040575edcb44841cf8a61b6bc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PokemonGoDesktop.Unity.Common.OnSessionChangedEvent, PokemonGoDesktop.Unity.Common,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!4 &1848648755
 Transform:
   m_ObjectHideFlags: 0
@@ -2502,6 +2621,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1848648754}
         m_MethodName: SetAuthenticationToken
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1778083756}
+        m_MethodName: TryAuthenticate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
